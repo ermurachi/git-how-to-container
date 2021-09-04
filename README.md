@@ -113,19 +113,14 @@ docker container run \
 -v /Users/ion/Documents/dev/node-project:/root/node-project/ \
 -it ubuntu
 ```
-
-Install git after connectig to the container: \
 _Dockerfile can be used to copy the SSH config and install git, however this needs creation/copy/updating of the Dockerfile_
-```
-apt update
-apt install git
-```
 
-If you need latest version of git:
+Install latest version of git ([Link](https://git-scm.com/download/linux)):
 ```
 apt update
-apt install y software-properties-common
-apt install y git
+apt install -y software-properties-common
+add-apt-repository ppa:git-core/ppa
+apt install -y git
 ```
 
 Configure git:
@@ -144,7 +139,14 @@ file:/root/.gitconfig   user.name=Captain Picard
 file:/root/.gitconfig   user.email=picard@gmail.com
 ```
 
-Another option way to list the config is to use add the --show-scope (git ver >= 2.8 [LINK](https://github.blog/2016-03-28-git-2-8-has-been-released/)), produces more output:
+Another option way to list the config is to use add the --show-scope (git ver >= 2.8 [Link](https://github.blog/2016-03-28-git-2-8-has-been-released/)), produces more output:
 ```
 git config --list --show-origin --show-scope
+```
+
+Add the public key to your github account [Link](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#): Top right account > Settings > SSH and GPG keys > New SSH key
+
+This is an example of public key (ends with an email):
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AABAIL8HHizFWbThkMKKJPOzw19EbosBNdjbCstDUe7Bgpe1 picard@gmail.com
 ```
