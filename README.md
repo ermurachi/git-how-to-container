@@ -1,14 +1,13 @@
 # git-how-to
 
-### map git configs to multiple accounts on the same machine through containers (docker)
-
+### GIT map to container
 *OS used: MacOS, same steps can be used for linux.*
 
 ### Problem: 
-What if there are multiple github accounts that need to be used for different projects.
+What if there are multiple github accounts that need to be used for different projects?
 
 ### Solution
-A github account is assotiated with an email and with a SSH key.
+A github account is assotiated with an email and with a SSH key to a container.
 Use a different directory in the host machine to store the SSH key and a different directory for git repo.
 Use a ubuntu container to map the new SSH and git repo directories.
 
@@ -17,7 +16,7 @@ Use a ubuntu container to map the new SSH and git repo directories.
 
 ### Prepare the Setup
 ---
-Install docker[Link](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
+Install docker [Link](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script):
 ```bash
 curl -fsSL https://test.docker.com -o test-docker.sh
 ```
