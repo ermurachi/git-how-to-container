@@ -82,8 +82,8 @@ $ tree -a
 ```
 
 Generate a new SSH key.\
-The string after -C is the email using for github account in this case (any string can be used instead of the email):
-[How-to-Github-link](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+The string after -C is the email using for github account in this case (any string can be used instead of the email)
+[how-to-Github-link](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key):
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
