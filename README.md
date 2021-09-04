@@ -121,6 +121,13 @@ apt update
 apt install git
 ```
 
+If you need latest version of git:
+```
+apt update
+apt install y software-properties-common
+apt install y git
+```
+
 Configure git:
 ```
 git config --global user.name "Captain Picard"
