@@ -144,4 +144,9 @@ Another option way to list the config is to use add the --show-scope (git ver >=
 git config --list --show-origin --show-scope
 ```
 
-Add the SSH key to your github account [Link](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#): Top right account > Settings > SSH and GPG keys > New SSH key
+Add the public key to your github account [Link](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#): Top right account > Settings > SSH and GPG keys > New SSH key
+
+This is an example of public key (ends with an email):
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AABAIL8HHizFWbThkMKKJPOzw19EbosBNdjbCstDUe7Bgpe1 picard@gmail.com
+```
