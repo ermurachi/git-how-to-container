@@ -7,15 +7,14 @@
 What if there are multiple github accounts that need to be used for different projects?
 
 ### Solution
-A github account is assotiated with an email and with a SSH key to a container.
+A github account is assotiated with an email and with an SSH key to a container.
 Use a different directory in the host machine to store the SSH key and a different directory for git repo.
 Use a ubuntu container to map the new SSH and git repo directories.
 
-*Using the steps in this document might give you the feeling of using one computer for one git account.*
 
+---
 
 ### Prepare the Setup
----
 Install docker [Link](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script):
 ```bash
 curl -fsSL https://test.docker.com -o test-docker.sh
@@ -89,7 +88,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 This will generate a private key and a public key:
 
-* public key \.pub  \(id_ed25519.pub\) can be shared with public, anyone*
+* public key \.pub  \(id_ed25519.pub\) can be shared with public, anyone.
 * private key (id_ed25519) is to be kept private, don't share
 ```bash
 $ pwd & tree
