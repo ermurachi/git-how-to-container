@@ -85,7 +85,7 @@ Generate a new SSH key. The string after -C is the email using for github accoun
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-This will generate a private key and a public key
+This will generate a private key and a public key:
 
 * public key \.pub  \(id_ed25519.pub\) can be shared with public, anyone*
 * private key (id_ed25519) is to be kept private, don't share
