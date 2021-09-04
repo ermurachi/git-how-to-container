@@ -33,7 +33,7 @@ Verify that docker was successfully installed:
 docker -v
 ```
 
-Typical SSH config is in the hidden .ssh under home directory (cd ~/.ssh):
+Typical SSH config is in the hidden .ssh under home directory (cd ~/.ssh).\
 Navigate in the the .ssh directory:
 ```bash
 cd ~/.ssh
@@ -49,17 +49,17 @@ $ tree -a
 └── known_hosts
 ```
 
-In the .ssh directory create another hidden directory. In this directory config for other accounts will be storred.
+In the .ssh directory create another hidden directory.
 ```bash
 mkdir .ssh_other_accounts
 ```
 
-Change directory to .ssh_other_accounts and create a directory for the new github/ssh account.
+Change directory to .ssh_other_accounts and create a directory.
 ```bash
 cd .ssh_other_account
 ```
 
-Create the directory for the new account:
+Create a directory that will be used to store ssh-key assotiated with the new git account.
 ```bash
 mkdir ermurachi_gmail_com
 ```
