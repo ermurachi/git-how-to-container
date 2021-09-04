@@ -97,6 +97,10 @@ $ pwd & tree
 ├── id_ed25519
 └── id_ed25519.pub
 ```
+Give only read permissions for the private key(id_ed25519):
+```
+chmod 400 id_ed25519
+```
 
 Connect to the CLI of ubuntu container.\
 Map the volumes with -v LOCAL_DIR:CONTAINER_DIR. \
