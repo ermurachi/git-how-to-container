@@ -7,8 +7,8 @@
 What if there are multiple github accounts that need to be used for different projects?
 
 ### Solution
-A github account is assotiated with an email and with an SSH key to a container.
-Use a different directory in the host machine to store the SSH key and a different directory for git repo.
+A github account is assotiated with an email and with an SSH key to a container. \
+Use a different directory in the host machine to store the SSH key and a different directory for git repo. \
 Use a ubuntu container to map the new SSH and git repo directories.
 
 
