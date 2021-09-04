@@ -40,7 +40,7 @@ cd ~/.ssh
 
 Typical content of an .ssh directory
 ```bash
-$ tree -a
+tree -a
 .
 ├── config
 ├── id_rsa
@@ -60,12 +60,12 @@ cd .ssh_other_account
 
 Create a directory that will be used to store ssh-key assotiated with the new git account.
 ```bash
-mkdir ermurachi_gmail_com
+mkdir picard_gmail_com
 ```
 
 List the directory structure:
 ```bash
-cd ermurachi_gmail_com
+cd picard_gmail_com
 tree -a
 ```
 
@@ -73,7 +73,7 @@ tree -a
 $ tree -a
 .
 ├── .ssh_other_accounts
-│   └── ermurachi_gmail_com
+│   └── picard_gmail_com
 ├── config
 ├── id_rsa
 ├── id_rsa.pub
@@ -92,8 +92,48 @@ This will generate a private key and a public key:
 * private key (id_ed25519) is to be kept private, don't share
 ```bash
 $ pwd & tree
-/Users/ion/.ssh/.ssh_other_accounts/ermurachi_gmail_com
+/Users/ion/.ssh/.ssh_other_accounts/picard_gmail_com
 .
 ├── id_ed25519
 └── id_ed25519.pub
+```
+
+Connect to the CLI of ubuntu container.\
+Map the volumes with -v LOCAL_DIR:CONTAINER_DIR. \
+Two volumes are mounted in bellow example from the host into the ubuntu container:
+* SSH directory
+* node-project directory
+```
+docker container run \
+-v /Users/ion/.ssh/.ssh_other_accounts/picard_gmail_com:/root/.ssh/ \
+-v /Users/ion/Documents/dev/node-project:/root/node-project/ \
+-it ubuntu
+```
+
+Install git after connectig to the container: \
+_Dockerfile can be used to copy the SSH config and install git, however this needs creation/copy/updating of the Dockerfile_
+```
+apt update
+apt install git
+```
+
+Configure git:
+```
+git config --global user.name "Captain Picard"
+git config --global user.email picard@gmail.com
+```
+
+List the git config and location from where this config is coming from:
+```
+git config --global --list --show-origin
+```
+```
+Output of: git config --global --list --show-origin
+file:/root/.gitconfig   user.name=Captain Picard
+file:/root/.gitconfig   user.email=picard@gmail.com
+```
+
+Another option way to list the config is to use add the --show-scope (git ver >= 2.8 [LINK](https://github.blog/2016-03-28-git-2-8-has-been-released/)), produces more output:
+```
+git config --list --show-origin --show-scope
 ```
