@@ -17,7 +17,7 @@ Use a ubuntu container to map the new SSH and git repo directories.
 
 ### Prepare the Setup
 ---
-Install [docker](https://docs.docker.com/engine/install/ubuntu/)
+Install docker[Link](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
 ```bash
 curl -fsSL https://test.docker.com -o test-docker.sh
 ```
