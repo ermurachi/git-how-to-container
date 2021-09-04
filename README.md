@@ -91,6 +91,8 @@ This will generate a private key and a public key
 * public key \.pub  \(id_ed25519.pub\) can be shared with public, anyone*
 * private key (id_ed25519) is to be kept private, don't share
 ```bash
+$ pwd & tree
+/Users/ion/.ssh/.ssh_other_accounts/ermurachi_gmail_com
 .
 ├── id_ed25519
 └── id_ed25519.pub
